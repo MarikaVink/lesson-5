@@ -9,7 +9,7 @@ $mysql = new mysqli("localhost",$db_username, $db_password,"webpr2016_marvin");
 
 //SQL sentence
 $stmt = $mysql->prepare("SELECT id, gender, age, height, weight,
- created FROM BMI_app ORDER BY created DESC LIMIT 10");
+ created FROM BMI_app ORDER BY id DESC LIMIT 10");
 
 //if error in sentence
 echo $mysql->error;
