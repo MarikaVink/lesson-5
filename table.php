@@ -9,7 +9,7 @@ $mysql = new mysqli("localhost",$db_username, $db_password,"webpr2016_marvin");
 
 //SQL sentence
 $stmt = $mysql->prepare("SELECT id, recipient, message,
- created FROM messages_sample ORDER BY created DESC LIMIT 7");
+ created FROM messages_sample ORDER BY created DESC LIMIT 10");
 
 //if error in sentence
 echo $mysql->error;
@@ -36,7 +36,12 @@ while($stmt->fetch()){
 	
 	//DO SOMETHING FOR EACH ROW
 	//echo $id." ".$message."<br>";
-	
+		$table_html .="<tr>";//start new row
+$table_html .="<td>".$id."</td>";
+$table_html .="<td>".$recipient."</td>";
+$table_html .="<td>".$message."</td>";
+$table_html .="<td>".$created."</td>";
+$table_html .="</tr>"; //end row
 	
 	
 }
