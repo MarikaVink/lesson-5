@@ -124,6 +124,8 @@
 ?>
 
 <h2> First application </h2>
+<br>
+<a href="table.php">table</a>
 
 <form method="get">
 <label for="message"> Message:*</label><br>
@@ -137,3 +139,4 @@
 	
 
 </form>
+
